@@ -1,16 +1,16 @@
-# React + Vite
+# Halloween Birthday Countdown - React Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend dashboard for a 10-day birthday countdown calendar! It features a spooky 10-door grid that unlocks day-by-day starting on October 22nd. Clicking an unlocked door opens up a fun custom mini-game hosted over on itch.io.
 
-Currently, two official plugins are available:
+## The Setup
+* **Code:** React 19 + Vite
+* **Hosting:** Vercel 
+* **Animations:** Pure CSS and React canvas layout loops
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fun Features
+* **Interactive Grid:** Talks directly to the Java API to visually lock or unlock doors in real time, with a built-in confirmation prompt before opening a game.
+* **Time Travel Button:** Want to skip ahead and cheat? There is a date-picker testing panel that lets you simulate future dates, instantly unlocking later doors so you can preview everything.
+* **Animated Sprites:** A pixel-art star and a wandering cat stroll back and forth across the screen, cleanly flipping directions and bouncing around whenever they hit the edges.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+Built by **sunnyandkate** | Maharani Websites Portfolio
