@@ -1,0 +1,132 @@
+body {
+  background-color: #28383e;
+  color: #d7c7c1;
+  font-family: 'Papyrus';
+  margin: 0;
+  padding: 20px;
+}
+
+.app-portal {
+  width: 80%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.pixel-star, .pixel-cat {
+  width: 64px; 
+  height: auto;
+  
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.portal-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.portal-header h1{
+  color: #fffcb3;
+}
+
+.time-travel-panel {
+  background-color: #51707b;
+  border: 2px dashed #c1d1d7;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+/* Glowing flashing warning border when time travel active */
+.time-travel-panel.temporal-active {
+  border-color: #ffcc00;
+  box-shadow: 0 0 15px #fffcb3;
+  background-color: #51707b;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.time-travel-panel p{
+  text-align: left;
+}
+
+.date-picker {
+  background: #3e2838;
+  color: #d7c1d1;
+  border: 1px solid #7b5170;
+  padding: 8px 12px;
+  font-family: inherit;
+  border-radius: 4px;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .calendar-grid { grid-template-columns: repeat(1, 1fr); }
+  .grid-box { width: 80%; margin: 0 auto;}
+}
+.grid-box {
+  background: #141c1f;
+  border: 2px solid #1e2a2f;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.box-img {
+  width: 40px;  
+  height: 40px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.box-unlocked:hover {
+  transform: translateY(-4px);
+  border-color: #c1d1d7;
+  box-shadow: 0 5px 15px #c1d1d7;
+}
+
+.box-locked {
+  background: #141c1f;
+  border-color: #1e2a2f;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.box-number { font-weight: bold; font-size: 14px; color: #c1d1d7; }
+.box-unlocked .box-number { color: #84a3ae;}
+.box-icon { font-size: 32px; }
+.box-status { font-size: 11px; text-transform: uppercase; }
+
+
+
+footer{
+  background-color: #84a3ae;
+  font-size: 1rem;
+  margin-top: auto;
+}
+footer a{
+  color: #2b3b31;
+  text-decoration: none;
+}
+.footer-container{
+  color: #141c1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
