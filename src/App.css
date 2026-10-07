@@ -107,7 +107,11 @@ body {
 .box-number { font-weight: bold; font-size: 14px; color: #c1d1d7; }
 .box-unlocked .box-number { color: #84a3ae;}
 .box-icon { font-size: 32px; }
-.box-status { font-size: 11px; text-transform: uppercase; }
+.box-status { 
+  color: #c1d1d7;
+  font-size: 11px; 
+  text-transform: uppercase; 
+}
 
 
 
