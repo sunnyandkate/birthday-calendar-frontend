@@ -11,6 +11,7 @@ export default function App() {
   const [unlockedUpToDay, setUnlockedUpToDay] = useState(0);
   const [mockDate, setMockDate] = useState('');
   const [isTimeTravelActive, setIsTimeTravelActive] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Core API fetch link connecting to running local Spring Boot backend
   const fetchCalendarStatus = (selectedDate) => {
@@ -22,6 +23,8 @@ export default function App() {
       url += `?mockDate=${selectedDate}`;
     }
 
+    setIsLoading(true);
+
     fetch(url)
       .then((response) => {
         if (!response.ok) throw new Error('Network status evaluation failed');
@@ -31,7 +34,10 @@ export default function App() {
         setUnlockedUpToDay(data.unlockedUpToDay);
         setIsTimeTravelActive(data.timeTravelActive);
       })
-      .catch((error) => console.error('Connection Error pointing to Spring Boot backend:', error));
+      .catch((error) => console.error('Connection Error pointing to Spring Boot backend:', error))
+      .finally(() => {      
+        setIsLoading(false);
+      });
   };
 
   // Trigger state evaluation immediately on window load
@@ -53,6 +59,8 @@ export default function App() {
    // let detailsUrl = `http://localhost:8080/api/calendar/day/${dayNumber}`;
     let detailsUrl = `${API_BASE}/api/calendar/day/${dayNumber}`;
     if (mockDate) detailsUrl += `?mockDate=${mockDate}`;
+
+    setIsLoading(true);
 
     fetch(detailsUrl)
       .then((res) => {
@@ -83,11 +91,27 @@ export default function App() {
           alert('Data Error: This day entry exists, minigame_url is blank in MySQL');
         }
       })
-      .catch((err) => console.warn('Navigation pipeline halted:', err.message));
+      .catch((err) => console.warn('Navigation pipeline halted:', err.message))
+      .finally(() => {
+       
+        setIsLoading(false);
+      });
   };
 
   return (
     <div className="app-portal">
+      {isLoading && (
+        <div className="loading-overlay">
+          <div className="loading-spinner-box">
+            <img src="/images/pumpkin.png" className="spinning-asset" alt="Loading" />
+            <h3>Waking up backend cloud containers...</h3>
+            <p>Render's Free Tier server is booting up. Please allow up to 30 seconds for Loading!</p>
+          </div>
+        </div>
+      )}
+
+
+
       <header className="portal-header">
         
         <h1><img src="/images/pumpkin.png" /> Birthday Countdown <img src="/images/pumpkin.png" /></h1>
