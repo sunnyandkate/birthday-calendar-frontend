@@ -26,9 +26,9 @@ export default function CalendarGrid({ unlockedUpToDay, onDayClick }) {
             <div className="box-number">Day {dayNum < 10 ? `0${dayNum}` : dayNum}</div>
             <div className="box-icon">
               {isLocked ? (
-                <img src="/images/lockedDoor.png" alt="Locked" className="box-img" />
+                <img src="images/lockedDoor.png" alt="Locked" className="box-img" />
               ) : (
-                <img src="/images/openedDoor.png" alt="Unlocked" className="box-img" />
+                <img src="images/openedDoor.png" alt="Unlocked" className="box-img" />
               )}
             </div>
             <div className="box-status">{isLocked ? 'Locked' : 'Open Minigame'}</div>

@@ -103,7 +103,7 @@ export default function App() {
       {isLoading && (
         <div className="loading-overlay">
           <div className="loading-spinner-box">
-            <img src="/images/pumpkin.png" className="spinning-asset" alt="Loading" />
+            <img src="images/pumpkin.png" className="spinning-asset" alt="Loading" />
             <h3>Waking up backend cloud containers...</h3>
             <p>Render's Free Tier server is booting up. Please allow up to 30 seconds for Loading!</p>
           </div>
@@ -114,7 +114,7 @@ export default function App() {
 
       <header className="portal-header">
         
-        <h1><img src="/images/pumpkin.png" /> Birthday Countdown <img src="/images/pumpkin.png" /></h1>
+        <h1><img src="images/pumpkin.png" /> Birthday Countdown <img src="images/pumpkin.png" /></h1>
         <p>Unlock today's door!</p>
       </header>
 
