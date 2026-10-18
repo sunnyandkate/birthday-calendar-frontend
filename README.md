@@ -4,7 +4,7 @@ This is the frontend dashboard for a 10-day birthday countdown calendar! It feat
 
 ## The Setup
 * **Code:** React 19 + Vite
-* **Hosting:** Vercel 
+* **Hosting:** Ecowebhosting 
 * **Animations:** Pure CSS and React canvas layout loops
 
 ## Fun Features
