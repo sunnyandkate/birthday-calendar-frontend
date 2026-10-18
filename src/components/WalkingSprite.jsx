@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 export default function WalkingSprite() {
   const starFrames = [
-    '/images/starOne.png',
-    '/images/starTwo.png',
-    '/images/starThree.png',
-    '/images/starTwo.png' // Loop back to the middle frame for a smooth gait cycle
+    'images/starOne.png',
+    'images/starTwo.png',
+    'images/starThree.png',
+    'images/starTwo.png' // Loop back to the middle frame for a smooth gait cycle
   ];
 
   const catFrames = [
-    '/images/catOne.png',
-    '/images/catTwo.png'
+    'images/catOne.png',
+    'images/catTwo.png'
   ];
 
   const [starIndex, setStarIndex] = useState(0);
